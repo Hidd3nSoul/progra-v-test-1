@@ -1,0 +1,7 @@
+{
+  "name": "Progra v test 1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

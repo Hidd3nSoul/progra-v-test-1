@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/catalogo"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{partido.nombre}}</ion-title>
+    <ion-text color="danger" *ngIf="!finalizado" slot="primary">
+      <h6>Finalizado</h6>
+    </ion-text>
+    <ion-buttons slot="primary" *ngIf="finalizado">
+      <ion-button (click)="delete()">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-toggle [(ngModel)]="finalizado" slot="primary" color="success" checked></ion-toggle>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-col>
+      <ion-img [src]="partido.img"></ion-img>
+    </ion-col>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="football"></ion-icon>
+        {{partido.evento1}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="football"></ion-icon>
+        {{partido.evento2}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="football"></ion-icon>
+        {{partido.evento3}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="football"></ion-icon>
+        {{partido.evento4}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
